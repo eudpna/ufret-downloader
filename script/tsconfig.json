@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "sourceMap": true,
+        "module": "commonjs",
+        "target": "es5",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+    },
+    "include": [
+        "**/*"
+    ],
+    "exclude": [
+        "./node_modules"
+    ]
+}
