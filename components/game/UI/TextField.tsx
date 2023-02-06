@@ -21,7 +21,13 @@ export const TextField: React.FC<{
                 }} style={{
                     width: '100%',
                     border: 'solid 1px #bbb',
-                }} />
+                }} 
+                onKeyDown={(e) => {
+                    if (['Enter', 'enter', 'Return', 'return'].includes(e.key)) {
+                        gctx.submit()
+                    }
+                }}
+                />
         </div>
 
         <div className="">

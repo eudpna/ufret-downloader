@@ -5,14 +5,20 @@ import { parseUfret } from '../../game/parseUfret';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const urlStr = req.query.url
 
-    if (typeof urlStr !== 'string') res.status(400).send('Invalid request.')
+    if (typeof urlStr !== 'string') {
+        res.status(400).send('Invalid request.')
+        return
+    }
 
     const url = new URL(urlStr as string)
      
     // validate url
     if (!url || !(url.hostname === 'ufret.jp' ||
         url.hostname === 'www.ufret.jp')
-    ) res.status(400).send('Invalid request.')
+    ) {
+        res.status(400).send('Invalid request.')
+        return
+    }
 
     const response = await fetch(urlStr as string)
 
