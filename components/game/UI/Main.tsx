@@ -11,7 +11,25 @@ export const Main: React.FC<{
 
     return <div className="px-2 max-w-3xl mx-auto">
 
-        <div className="mt-6" style={{
+        <div
+            style={{
+                display: 'inline-block',
+                position: 'absolute',
+                right: 0,
+                textAlign: 'right',
+                paddingRight: 7,
+            }}
+        >
+            <a href="https://github.com/eudpna/ufret-downloader" target="_blank" rel="noopener noreferrer"
+                style={{
+                    fontSize: '0.9rem',
+                }}
+            >
+                GitHub
+            </a>
+        </div>
+
+        <div className="pt-6" style={{
 
         }}>
             <div className="text-lg font-bold text-gray-700 inline-block">
@@ -19,6 +37,9 @@ export const Main: React.FC<{
             </div>
         </div>
 
+        <div>
+         
+        </div>
 
         <div className="mt-8">
             <TextField gctx={gctx} />
